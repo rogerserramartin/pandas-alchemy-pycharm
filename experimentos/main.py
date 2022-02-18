@@ -28,6 +28,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 # metemos todos los clientes a la vez
 # https://docs.sqlalchemy.org/en/14/orm/tutorial.html
+# https://docs.sqlalchemy.org/en/14/orm/session_transaction.html <- mirar esto porque son transactions y no hace falta try catch/exception
 try:
     session.addAll(clientes)
     session.commit()
